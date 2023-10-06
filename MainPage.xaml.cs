@@ -34,9 +34,12 @@ public partial class MainPage : ContentPage
 
     }
 
-    private void Btn_reset(object sender, EventArgs e)
-    {
-
-    }
+    //private void Btn_reset(object sender, EventArgs e)
+    //{
+    //    currentInput = string.Empty;
+    //    reslt = 0,0;
+    //    CurrentOperator = String.Empty;
+    //    DisplayEntry.Text = "0";
+    //}
 }
 
