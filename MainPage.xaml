@@ -20,7 +20,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Entry Margin="0,300,0,0" Placeholder="Вывод" FontSize="60" TextColor="White" BackgroundColor="Black" Grid.ColumnSpan="4"  IsReadOnly="True" />
+        <Entry Margin="0,300,0,0" x:Name="Entry_1" Placeholder="Вывод" FontSize="60" TextColor="White" BackgroundColor="Black" Grid.ColumnSpan="4"  IsReadOnly="True" />
 
 
         <!-- Разместите кнопки с числами -->
@@ -42,7 +42,7 @@
         <Button Margin="7,7,7,7" Text="+" Clicked="Btn_plus"  Grid.Row="4" Grid.Column="3" BackgroundColor="#ff9503" TextColor="White" FontSize="34" CornerRadius="50"/>
 
         <!-- Кнопка равно -->
-        <Button Margin="7,7,7,7" Text="=" Grid.Row="4" Grid.Column="2" BackgroundColor="#ff9503" TextColor="White" FontSize="34" CornerRadius="50"/>
+        <Button Margin="7,7,7,7" Text="=" Clicked="Btn_equals" Grid.Row="4" Grid.Column="2" BackgroundColor="#ff9503" TextColor="White" FontSize="34" CornerRadius="50"/>
 
         <!-- Кнопка очистки -->
         <Button Margin="7,7,7,7" Text="C" Clicked="Btn_reset" Grid.Row="4" Grid.Column="0" BackgroundColor="#ff9503" TextColor="White" FontSize="34" CornerRadius="50"/>
