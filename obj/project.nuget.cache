@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "by+hgB5fSQ7WDvjC0xTYkHtEG/UuKnDef5LBrTcptp0ByIWJz8HMEYqtzu+Lnov/OVMKGd45TD9SJmUUmgtWlQ==",
+  "dgSpecHash": "y/Nf4gC8avZOZbO8LXhQbwLoXzaZnvhO64oM8j6x3f7qzHmDGS/dvdv4lzfRd4LD6J5dDNLBupH2gw1v80SJ7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\visual\\Source\\Repos\\Calculator-Kosichkin2\\Calculator Kosichkin.csproj",
+  "projectFilePath": "C:\\Users\\visual\\Source\\Repos\\Calculator-Kosichkin=5\\Calculator Kosichkin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\visual\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\visual\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",

@@ -2,9 +2,9 @@
 
 public partial class MainPage : ContentPage
 {
-    private string currentInput = "";
-    private double firstNumber = 0;
-    private char operation = ' ';
+    private string currentInput = string.Empty;
+    private string currentOperator = string.Empty;
+    private double result = 0.0;
 
     public MainPage()
     {
@@ -13,72 +13,80 @@ public partial class MainPage : ContentPage
 
     private void Btn_numbers(object sender, EventArgs e)
     {
-        Entry_1.Text += (sender as Button).Text; // нажатая кнопка выводится в entry
+        //Entry_1.Text += (sender as Button).Text; // нажатая кнопка выводится в entry
 
+        Button button = (Button)sender;
+        currentInput += button.Text;
+        Entry_1.Text = currentInput;
     }
 
-    private void Btn_plus(object sender, EventArgs e)
+    private void OnOperatorButton(object sender, EventArgs e)
     {
-     // кнопка сложения
-    }
-
-    private void btn_minus(object sender, EventArgs e)
-    {
-       // кнопка вычитания 
-    }
-
-    private void Btn_divide(object sender, EventArgs e)
-    {
-       // кнопка деления
-    }
-
-    private void Btn_multiply(object sender, EventArgs e)
-    {
-       // кнопка умножения
-    }
-
-    private void Btn_equals(object sender, EventArgs e)
-    {
-        // кнопка равенства 
-    }
-
-    private void Btn_reset(object sender, EventArgs e)
-    {
-     // кнопка сброса 
-    }
-
-
-    private void PerformCalculation()
-    {
+        Button button = (Button)sender;
         if (!string.IsNullOrEmpty(currentInput))
         {
-            double inputNumber = double.Parse(currentInput);
-            switch (operation)
+            if (!string.IsNullOrEmpty(currentOperator))
             {
-                case '+':
-                    firstNumber += inputNumber;
-                    break;
-                case '-':
-                    firstNumber -= inputNumber;
-                    break;
-                case '*':
-                    firstNumber *= inputNumber;
-                    break;
-                case '/':
-                    if (inputNumber != 0)
-                    {
-                        firstNumber /= inputNumber;
-                    }
-                    else
-                    {
-                        // вывести ошибку деления на ноль 
-                    }
-                    break;
+                result = PerformOperation(result, double.Parse(currentInput), currentOperator);
+                Entry_1.Text = result.ToString();
             }
-            currentInput = "";
-            Entry_1.Text = firstNumber.ToString();
-        }
+            else
+            {
+                result = double.Parse(currentInput);
+            }
 
+            currentInput = string.Empty;
+            currentOperator = button.Text;
+        }
+    }
+
+    private void OnCalculate(object sender, EventArgs e)
+    {
+        if (!string.IsNullOrEmpty(currentInput) && !string.IsNullOrEmpty(currentOperator))
+        {
+            result = PerformOperation(result, double.Parse(currentInput), currentOperator);
+            Entry_1.Text = result.ToString();
+            currentInput = string.Empty;
+            currentOperator = string.Empty;
+        }
+    }
+
+    private void OnCleaer(object sender, EventArgs e)
+    {
+        currentInput = string.Empty;
+        currentOperator = string.Empty;
+        result = 0.0;
+        Entry_1.Text = "0";
+    }
+
+
+
+   
+
+
+    private double PerformOperation(double operand1, double operand2, string operatorSymbol)
+    {
+        switch (operatorSymbol)
+        {
+            case "+":
+                return operand1 + operand2;
+            case "-":
+                return operand1 - operand2;
+            case "×":
+                return operand1 * operand2;
+            case "÷":
+                if (operand2 != 0)
+                {
+                    return operand1 / operand2;
+                }
+                else
+                {
+                    // Handle division by zero
+                    return double.NaN;
+                }
+            default:
+                return operand2;
+        }
     }
 }
 

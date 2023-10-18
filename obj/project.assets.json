@@ -24014,20 +24014,22 @@
   },
   "packageFolders": {
     "C:\\Users\\visual\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\visual\\Source\\Repos\\Calculator-Kosichkin2\\Calculator Kosichkin.csproj",
+      "projectUniqueName": "C:\\Users\\visual\\Source\\Repos\\Calculator-Kosichkin=5\\Calculator Kosichkin.csproj",
       "projectName": "Calculator Kosichkin",
-      "projectPath": "C:\\Users\\visual\\Source\\Repos\\Calculator-Kosichkin2\\Calculator Kosichkin.csproj",
+      "projectPath": "C:\\Users\\visual\\Source\\Repos\\Calculator-Kosichkin=5\\Calculator Kosichkin.csproj",
       "packagesPath": "C:\\Users\\visual\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\visual\\Source\\Repos\\Calculator-Kosichkin2\\obj\\",
+      "outputPath": "C:\\Users\\visual\\Source\\Repos\\Calculator-Kosichkin=5\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\visual\\AppData\\Roaming\\NuGet\\NuGet.Config",
